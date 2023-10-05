@@ -1,12 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h>
-
 /**
- *  * main - Entry point
- *   * Return: Always 1 (Success)
- */
+ *  * main- Entry point
+ *   * @void: parameter
+ *    * Return: 1 (success)
+ *     **/
 int main(void)
 {
-		write(STDOUT_FILENO, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 5);
-		return (1);
+	    fprintf(stderr, "and that piece of art is useful\" - \
+			    Dora Korpar, 2015-10-19\n");
+	        return (1);
 }
+
