@@ -1,4 +1,4 @@
-#include <stdio.h>
+nclude <stdio.h>
 /**
  *  * main- Entry point
  *   * @void: parameter
@@ -10,4 +10,3 @@ int main(void)
 			    Dora Korpar, 2015-10-19\n");
 	        return (1);
 }
-
