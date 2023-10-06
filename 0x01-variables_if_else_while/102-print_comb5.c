@@ -6,38 +6,38 @@
  */
 int main(void)
 {
-		int x;
-		int y;
-		int z;
-		int i;
+int x;
+int y;
+int z;
+int i;
 
-		for (x = '0' ; x <= '9' ; x++)
+for (x = '0' ; x <= '9' ; x++)
+{
+	for (i = '0' ; i <= '9' ; i++)
+	{
+		for (y = '0' ; y <= '9' ; y++)
 		{
-			for (i = '0' ; i <= '9' ; i++)
+			for (z = '0' ; z <= '9' ; z++)
 			{
-				for (y = '0' ; y <= '9' ; y++)
+				if (y * 10 + z > x * 10 + i)
 				{
-					for (z = '0' ; z <= '9' ; z++)
+					putchar(x);
+					putchar(i);
+					putchar(' ');
+					putchar(y);
+					putchar(z);
+					if (x == '9' && i == '8' && y == '9' && z == '9')
 					{
-						if (y >= x && z > i)
-						{
-							putchar(x);
-							putchar(i);
-							putchar(' ');
-							putchar(y);
-							putchar(z);
-							if (x == '9' && i == '8' && y == '9' && z == '9')
-							{
-								break;
-							}
-							putchar(',');
-							putchar(' ');
-						}
+						break;
 					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
-		putchar('\n');
-		return (0);
+	}
+}
+putchar('\n');
+return (0);
 }
 
