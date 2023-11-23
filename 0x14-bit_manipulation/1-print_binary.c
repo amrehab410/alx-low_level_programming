@@ -7,23 +7,19 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int temp;
-	int shifts;
+	int num = sizeof(unsigned long int) * 8;
+	int printed = 0;
 
-	if (n == 0)
+	while (num)
 	{
-		printf("0");
-		return;
+		if (n & 1L << --num)
+		{
+			_putchar('1');
+			printed++;
+		}
+		else if (printed)
+			_putchar('0');
 	}
-
-	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
-		;
-
-	for (; shifts >= 0; shifts--)
-	{
-		if ((n >> shifts) & 1)
-			printf("1");
-		else
-			printf("0");
-	}
+	if (!printed)
+		_putchar('0');
 }
